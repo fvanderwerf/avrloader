@@ -1,7 +1,5 @@
 
 import serial
-import threading
-import sys
 
 class LineCommand:
     def __init__(self, device):
@@ -75,12 +73,6 @@ class Numato:
     def read(self, index):
         response = self._line.command('gpio read ' + str(index))
         return response[0] == '1'
-
-def dump(device):
-    while True:
-        out = device.read(1)
-        sys.stdout.write(out)
-
 
 class NumatoPin:
 

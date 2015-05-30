@@ -66,3 +66,5 @@ if __name__ == '__main__':
         avr.load_page(data)
         avr.write_page(address)
 
+
+    nreset.set()

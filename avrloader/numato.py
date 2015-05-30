@@ -3,7 +3,7 @@ import serial
 
 class LineCommand:
     def __init__(self, device):
-        self._serial = serial.Serial(device, 19200, timeout = 1)
+        self._serial = serial.Serial(device, 19200, timeout = 10)
         self._onewline = '\r'
         self._inewline = '\n\r'
 
